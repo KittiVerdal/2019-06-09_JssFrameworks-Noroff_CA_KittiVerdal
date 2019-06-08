@@ -1,3 +1,11 @@
-<p>
-  jssf-login works!
-</p>
+<div class="[ login ]">
+  <div>
+    <form [formGroup]="form" (ngSubmit)="userDetails(form.value)">
+      <input type="text" placeholder="Please enter username" formControlName="username" /><br />
+      <span class="[ errors ]" *ngIf="isUsername">Please enter a correct username</span><br />
+      <input type="password" placeholder="Please enter a password" formControlName="password" /><br />
+      <span class="[ errors ]" *ngIf="isPassword">Please enter a correct Password</span><br />
+      <button type="Submit">Submit</button>
+    </form>
+  </div>
+</div>
